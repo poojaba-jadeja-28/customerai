@@ -18,7 +18,7 @@ def Pricing():
     with open('style_sum.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-    prods = st.container()
+    #prods = st.container()
     upper_panel = st.container()
 
     department = None  # Initialize department variable
