@@ -30,7 +30,7 @@ def Pricing():
             department = np.sort(RESULT['DEPARTMENT'].unique()).tolist()
             dep_selection = st.selectbox('DEPARTMENT', department, index=0, key='department_select')
             st.markdown(
-                '<style>.stSelectbox {height: 30px; box-shadow: 0px 5px 12px #D9DEE5;border-radius: 2px;background:#ffffff;</style>',
+                '<style>.stSelectbox {height: 30px;border-radius: 2px;background:#ffffff;</style>',
                 unsafe_allow_html=True
             )
         with col2:
