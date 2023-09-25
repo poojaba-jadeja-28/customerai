@@ -25,7 +25,7 @@ def Pricing():
     category_selection = None  # Initialize category_selection variable
 
     with upper_panel:
-        col1, col2, col3 = st.columns([1, 1, 4])  # Adjust the column widths as needed
+        col1, col2= st.columns([1, 1])  # Adjust the column widths as needed
         with col1:
             department = np.sort(RESULT['DEPARTMENT'].unique()).tolist()
             dep_selection = st.selectbox('DEPARTMENT', department, index=0, key='department_select')
@@ -37,12 +37,6 @@ def Pricing():
             # Filter the categories based on the selected department
             categories_for_department = np.sort(RESULT[RESULT['DEPARTMENT'] == dep_selection]['CATEGORY'].unique()).tolist()
             category_selection = st.selectbox('CATEGORY', categories_for_department, index=0, key='category_select')
-            st.markdown(
-                '<style>.stSelectbox {height: 30px;}</style>',
-                unsafe_allow_html=True
-            )
-
-        with col3:
             st.markdown(
                 '<style>.stSelectbox {height: 30px;}</style>',
                 unsafe_allow_html=True
