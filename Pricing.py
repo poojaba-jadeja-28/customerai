@@ -30,7 +30,7 @@ def Pricing():
             department = np.sort(RESULT['DEPARTMENT'].unique()).tolist()
             dep_selection = st.selectbox('DEPARTMENT', department, index=0, key='department_select')
             st.markdown(
-                '<style>.stSelectbox {height: 30px;border-radius: 2px;background:#ffffff;</style>',
+                '<style>.stSelectbox {height: 30px;box-shadow:none;border-radius: 2px;background:#ffffff;</style>',
                 unsafe_allow_html=True
             )
         with col2:
@@ -38,13 +38,13 @@ def Pricing():
             categories_for_department = np.sort(RESULT[RESULT['DEPARTMENT'] == dep_selection]['CATEGORY'].unique()).tolist()
             category_selection = st.selectbox('CATEGORY', categories_for_department, index=0, key='category_select')
             st.markdown(
-                '<style>.stSelectbox {height: 30px;border-radius: 2px;background:#ffffff;</style>',
+                '<style>.stSelectbox {height: 30px;box-shadow:none;border-radius: 2px;background:#ffffff;</style>',
                 unsafe_allow_html=True
             )
 
         with col3:
             st.markdown(
-                '<style>.stSelectbox {height: 30px;border-radius: 2px;background:#ffffff;</style>',
+                '<style>.stSelectbox {height: 30px;box-shadow:noneborder-radius: 2px;background:#ffffff;</style>',
                 unsafe_allow_html=True
             )
 
